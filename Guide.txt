@@ -1,0 +1,1 @@
+this is a sample web site which again show some ui designs and the code which i wrote shows what css properties and javascript i have used .

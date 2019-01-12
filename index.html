@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>welcome to OUT OF BOX CSS</title>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-image: url(images/cover.jpg);
+            display: flex;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            align-items: center;
+            background-color: antiquewhite;
+        }
+
+        .download {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+
+        }
+
+        .download a {
+            color: white;
+            display: inline-block;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: 22px;
+            box-shadow: 0px 0px 1px black;
+            text-transform: uppercase;
+            background-color: orangered;
+            padding: 3px 15px;
+            transform: scale3d(1, 1, 1);
+            transition: transform .3s ease;
+        }
+
+        .download a:hover {
+            box-shadow: 0px 0px 3px black;
+            transform: scale3d(.95, .95, 1);
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .left {
+            flex: 1;
+            margin-left: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            transform: translateX(-400px);
+            animation: sliding 2s ease 1 forwards;
+        }
+
+        @keyframes sliding {
+            0% {}
+
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        .left h1 {
+            text-transform: uppercase;
+            font-family: fantasy;
+            font-size: 100px;
+        }
+
+        .left h3 {
+            font-size: 30px;
+            color: orangered;
+            font-family: monospace;
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .form {
+            width: 350px;
+            background-color: transparent;
+            border-left: 5px dotted orangered;
+            transform: translateY(-100px);
+            animation: slideform 2s ease 1 forwards;
+            color: orangered;
+        }
+
+        @keyframes slideform {
+            0% {}
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .form h2 {
+
+            font-weight: lighter;
+            font-size: 30px;
+            margin-left: 20px;
+            text-align: left;
+            font-family: sans-serif;
+            padding: 20px 0px;
+            text-transform: uppercase;
+        }
+
+        .form label {
+            display: block;
+            font-family: monospace;
+            text-transform: capitalize;
+            margin-left: 20px;
+            padding: 5px 0px;
+            font-size: 20px;
+        }
+
+        .form input {
+            margin-left: 20px;
+            background-color: transparent;
+            outline-width: 0px;
+            height: 30px;
+            border: 0px;
+            margin-bottom: 10px;
+            color: white;
+            width: 250px;
+            border-bottom: 2px solid orangered;
+        }
+
+        .form input::placeholder {
+            color: grey;
+            text-transform: capitalize;
+            transform: translateY(0px);
+            opacity: 1;
+            transition: all .5s ease;
+        }
+
+        .form input:focus::placeholder {
+            transform: translateY(-25px);
+            opacity: 0;
+        }
+
+        .form button {
+            display: block;
+            width: 250px;
+            margin: 5px 0px;
+            margin-left: 20px;
+            font-size: 20px;
+            font-family: monospace;
+            font-weight: lighter;
+            text-transform: uppercase;
+            background-color: orangered;
+            border: 0px;
+            padding: 1px 0px;
+            cursor: pointer;
+            color: lightgrey;
+            outline: none;
+            box-shadow: 0px;
+            transition: box-shadow .4s ease;
+        }
+
+        .form button:hover {
+            box-shadow: 0px 0px 0px 2px white;
+        }
+
+        .form a {
+            color: orangered;
+            font-family: sans-serif;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            transition: all .3s ease;
+            margin: 15px 0px;
+        }
+
+        .form a:hover {
+            text-decoration-line: underline;
+            text-decoration-color: white;
+        }
+
+        #sign-btn {
+            text-transform: uppercase;
+            width: 250px;
+            margin-left: 20px;
+        }
+
+        .footer {
+            color: white;
+            background-color: orangered;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 15px;
+            right: 0;
+            text-transform: capitalize;
+            padding: 10px 0px;
+            font-family: monospace;
+            text-align: center;
+        }
+
+        .footer span {
+            font-size: 20px;
+        }
+
+        .overlay-container {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            transform: translateX(100vw);
+            transition: all .6s ease;
+            background-color: rgba(255, 69, 0, 0.9);
+        }
+
+        .left-box {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left-box h1 {
+            font-size: 150px;
+            color: white;
+            font-family: monospace;
+            font-family: 'Poiret One', cursive;
+            text-transform: capitalize;
+        }
+
+
+
+        #cross {
+            cursor: pointer;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .right-box {
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        #sform {
+            width: 90%;
+        }
+
+        .row {
+            flex: 1;
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .col {
+            flex: 1;
+            display: flex;
+        }
+
+        .col label {
+            flex: 1;
+            font-family: 'Poiret One', cursive;
+            color: white;
+            font-size: 24px; 
+        }
+
+        .col input {
+            flex: 1.5;
+            background-color: transparent;
+            outline-width: 0px;
+            height: 30px;
+            border: 0px;
+            color: white;
+            border-bottom: 2px solid white;
+        }
+        #signup
+        {
+            width: 100%;
+            background-color: white;
+            border: transparent;
+            font-family: 'Poiret One', cursive;
+            font-weight: 900;
+            font-size: 20px;
+            padding:3px 0px;
+            cursor: pointer; 
+        }
+    </style>
+    <script type="text/javascript">
+        function setUp() {
+            var e1 = document.getElementById("usern");
+            e1.focus();
+        }
+        window.addEventListener('load', setUp, false);
+
+    </script>
+</head>
+
+<body>
+    <div class="download">
+        <a href="#">download</a>
+    </div>
+    <div class="container">
+        <div class="left">
+            <h1>out of box css</h1>
+            <h3>new css library for better styles and ui design...</h3>
+        </div>
+        <div class="right">
+            <div class="form">
+                <form action="">
+                    <h2>login</h2>
+                    <label for="usern"><span><img src="images/user.png" height="22px" width="22px" alt=""></span>user
+                        name</label>
+                    <input type="text" name="username" id="usern" placeholder="enter your username here.." />
+                    <label for="pass"><span><img src="images/lock.png" height="18px" width="18px" alt="">password</span></label>
+                    <input type="password" name="password" id="pass" placeholder="enter your password here.." />
+                    <button type="submit">submit</button>
+                </form>
+                <a href="#">forgot password?</a>
+                <button type="button" id="sign-btn">sign up</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">all rights reserved <span>&reg;</span> at UIWORLD CREATIONS</div>
+    <div class="overlay-container" id="overlay">
+        <span id="cross">
+            <img src="images/close.png">
+        </span>
+        <div class="left-box">
+            <h1>sign <br /> up</h1>
+        </div>
+        <div class="right-box">
+            <form id="sform">
+                <div class="row">
+                    <div class="col">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" />
+                    </div>
+                    <div class="col">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" />
+                    </div>
+                    <div class="col">
+                        <label for="mobile">Mobile</label>
+                        <input type="tel" id="mobile" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="cpassword">Confirm Password</label>
+                        <input type="password" id="cpassword" />
+                    </div>
+                    </div>
+                <div class="row">
+                <input id="signup" type="submit" value="SIGN UP">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function displayOverlay() {
+            var overlay = document.getElementById("overlay");
+            overlay.style.transform = "translateX(0vw)";
+        }
+        var signbtn = document.getElementById("sign-btn");
+        signbtn.addEventListener('click', displayOverlay, false);
+
+        function closeOverlay() {
+            var overlay = document.getElementById("overlay");
+            overlay.style.transform = "translateY(-100vh)";
+        }
+        var closebtn = document.getElementById("cross");
+        closebtn.addEventListener('click', closeOverlay, false);
+
+    </script>
+</body>
+
+</html>
